@@ -33,5 +33,7 @@ jobs:
       - name: Run checkin script
         env:
           GLADOS: ${{ secrets.GLADOS }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         # 使用 -u 参数强制刷新日志输出，防止 Actions 缓冲导致日志显示延迟
         run: python -u checkin.py
